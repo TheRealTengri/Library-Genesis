@@ -214,7 +214,7 @@ def nonfiction():
         print(downloadurl)
         show()
 if len(argv) < 3:
-    print("Format: libgen [fiction or nonfiction] isbn")
+    print("Format: python libgen.py [fiction or nonfiction] isbn")
     show()
     exit()
 else:
@@ -256,6 +256,6 @@ elif genre == "nonfiction":
         show()
         exit()
 else:
-    print("Format: libgen [fiction or nonfiction] isbn")
+    print("Format: python libgen.py [fiction or nonfiction] isbn")
     show()
     exit()
