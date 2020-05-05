@@ -213,7 +213,6 @@ def nonfiction():
         print("Getting download link...done")
         print(downloadurl)
         show()
-print(len(argv))
 if len(argv) < 3:
     print("Format: libgen [fiction or nonfiction] isbn")
     show()
