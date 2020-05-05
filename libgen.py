@@ -5,8 +5,6 @@ import subprocess
 import json
 from cursor import hide, show
 import getpass
-import wget
-import urllib
 global isbn
 hide()
 apppath = subprocess.getoutput("echo %appdata%")
