@@ -21,7 +21,7 @@ def fiction():
     if fileexists == False:
         key = input("Enter your Google Books API key (you can get one at https://developers.google.com/books/docs/v1/using#APIKey): ")
         print("Verifying API key...", end="\r")
-        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D9780590353427&key={0}".format(key))
+        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D{0}&key={1}".format(isbn, key))
         if verify.status_code == 200:
             print("Verifying API key...done")
             with open('apikey', "w+") as keyfile:
@@ -35,7 +35,7 @@ def fiction():
     else:
         keyfile = open('apikey', "r+")
         key = keyfile.read()
-        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D9780590353427&key={0}".format(key))
+        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D{0}&key={1}".format(isbn, key))
         if verify.status_code == 200:
             print("Verifying API key...done")
             keyfile.close()
@@ -118,7 +118,7 @@ def nonfiction():
     if fileexists == False:
         key = input("Enter your Google Books API key (you can get one at https://developers.google.com/books/docs/v1/using#APIKey): ")
         print("Verifying API key...", end="\r")
-        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D9780590353427&key={0}".format(key))
+        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D{0}&key={1}".format(isbn, key))
         if verify.status_code == 200:
             print("Verifying API key...done")
             with open('apikey', "w+") as keyfile:
@@ -132,7 +132,7 @@ def nonfiction():
     else:
         keyfile = open('apikey', "r+")
         key = keyfile.read()
-        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D9780590353427&key={0}".format(key))
+        verify = get("https://www.googleapis.com/books/v1/volumes?q=isbn\%3D{0}&key={1}".format(isbn, key))
         if verify.status_code == 200:
             print("Verifying API key...done")
             keyfile.close()
